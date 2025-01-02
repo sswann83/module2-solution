@@ -1,1 +1,68 @@
 styles.css
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Section Styles */
+.section {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 20px;
+  position: relative;
+  background-color: lightgray;
+}
+.section .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: darkgray;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid black;
+  font-size: 1.2em;
+}
+.section p {
+  margin-top: 40px; /* Ensure text doesn't overlap title */
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+  .section {
+    float: left;
+    width: 33.33%;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    float: none;
+    width: 100%;
+  }
+  #chicken, #beef {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .section {
+    float: none;
+    width: 100%;
+  }
+}
+
